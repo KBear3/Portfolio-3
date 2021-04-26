@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Bootstrap CDNs -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle's Profile Page</title>
+</head>
+
+<body>
+    <!-- _________________________________ NAVBAR __________________________________ -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+        <div class="container">
+            <!-- Left Side -->
+            <a class="navbar-brand" href="index.html">
+                <h2>Kyle Barrand</h2>
+            </a>
+            <!-- LinkedIn Button -->
+            <a href="https://www.linkedin.com/in/kyle-barrand-7573b7119/" class="fa fa-linkedin"></a>
+            <!-- Right Side -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item active">
+                        <button type="button" class="btn btn-danger">Contact
+                            <span class="sr-only">(current)</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- _________________________________ CONTAINER _________________________________ -->
+    <div class="container-fluid">
+
+        <!-- Portfolio Heading -->
+        <h1 class="my-4">Contact Me...</h1>
+
+        <form id="contact-form" method="post" action="contact.php">
+
+            <div class="messages"></div>
+
+            <div class="controls">
+                <p>
+                    <!-- blank line -->
+                </p>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_name">First name *</label>
+                            <input id="form_name" type="text" name="name" class="form-control"
+                                placeholder="Please enter your first name *" required="required"
+                                data-error="Firstname is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_lastname">Last name *</label>
+                            <input id="form_lastname" type="text" name="surname" class="form-control"
+                                placeholder="Please enter your last name *" required="required"
+                                data-error="Lastname is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_email">Your email address *</label>
+                            <input id="form_email" type="email" name="email" class="form-control"
+                                placeholder="Please enter your email address *" required="required"
+                                data-error="Valid email is required.">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_need">Why are you contacting me? *</label>
+                            <select id="form_need" name="need" class="form-control" required="required"
+                                data-error="Please specify your need.">
+                                <option value="">-- Please choose an option --</option>
+                                <option value="Request quotation">Just say hi!</option>
+                                <option value="Request order status">Request for more info...</option>
+                                <option value="Request copy of an invoice">Offer me a job!</option>
+                                <option value="Other">Something else.</option>
+                            </select>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="form_message">Message *</label>
+                            <textarea id="form_message" name="message" class="form-control"
+                                placeholder="Message for me *" rows="5" required="required"
+                                data-error="Please, leave us a message."></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="submit" class="btn btn-success btn-send" value="Send message">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted">
+                            <strong>*</strong> Required field.</p>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- _________________________________ FOOTER _________________________________ -->
+    <footer class="footer">
+        <div class="container" style="text-align: center"> Copyright &copy;
+            <script>document.write(new Date().getFullYear())</script> KWB
+        </div>
+    </footer>
+
+</body>
+
+</html>

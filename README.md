@@ -1,0 +1,3 @@
+This is an updated Portfolio page. It includes the two projects we worked on and some information about myself. It includes three pages; a page about myself, my portfolio page, and a contact me page. The contact page isnt set up yet on purpose so that functionality could be improved upon. I also included a slideshow showing some more information about me and some of my interests.  
+
+Thank you for reading!
